@@ -83,8 +83,8 @@ const PostModal = (props) => {
                                 <textarea 
                                     value={editorText} 
                                     onChange = {(e) => setEditorText(e.target.value)} 
-                                    placeholder="What do you want to talk about?"
-                                    onFocus = {true}
+                                    placeholder="Share your idea here..."
+                                    autoFocus = {true}
                                 />
                                 {
                                     assetArea === 'image' ? (
@@ -101,7 +101,7 @@ const PostModal = (props) => {
                                                 htmlFor="file"
                                                 style = {{cursor: "pointer"}}
                                             >
-                                                Select an image
+                                               click "here" to select an image
                                             </label>
                                         </p>
 
@@ -112,13 +112,13 @@ const PostModal = (props) => {
                                         <>
                                             <input 
                                                 type="text" 
-                                                placeholder="Please upload a video"
+                                                placeholder="Please input a video link"
                                                 value = {videoLink}
                                                 onChange = {(e) => setVideoLink(e.target.value)}
                                             />
                                             {videoLink && (
                                                 <ReactPlayer width={"100%"} url={videoLink}/>
-                                            )}
+                                            )}  
                                         </>
                                         )
                                     )}
@@ -136,12 +136,12 @@ const PostModal = (props) => {
                                 </AssetButton>
                             </AttachAssets>
 
-                            <ShareComment>
-                                <AssetButton>
+                            {/* <ShareComment>
+                                {/<AssetButton>
                                     <img src="/images/shared-comment.png" alt="" />
-                                    Anyone
-                                </AssetButton>
-                            </ShareComment>
+                                    
+                                </AssetButton> }
+                            </ShareComment> */}
 
                             <PostButton 
                                 disabled = {!editorText ? true : false} 
@@ -166,7 +166,7 @@ const Container = styled.div`
     z-index: 9999;
     color: #000000;
     background-color: rgba(0,0,0,0.8);
-    animation: fadeIn  0.3s;
+    animation: fadeIn  0.5ns;
 `;
 
 const Content = styled.div`
@@ -186,7 +186,7 @@ const Content = styled.div`
 const Header = styled.div`
     display: block;
     padding: 16px 28px;
-    border-bottom: 1px solid rgba(0,0,0,0.15);
+    border-bottom: 1px solid #e6a106;
     font-size: 16px;
     line-height: 1.5;
     color: rgba(0,0,0,0.6);
@@ -200,6 +200,7 @@ const Header = styled.div`
         width: 40px;
         min-width: auto;
         color: rgba(0,0,0,0.15);
+        border-radius: 10px;
 
         img {
             pointer-events: none;
@@ -262,28 +263,28 @@ const AttachAssets = styled.div`
     }
 `;
 
-const ShareComment = styled.div`
-    padding-left: 8px;
-    margin-right: auto;
-    border-left: 1px solid rgba(0,0,0,0.15);
+// const ShareComment = styled.div`
+//     padding-left: 8px;
+//     margin-right: auto;
+//     border-left: 1px solid rgba(0,0,0,0.15);
 
-    ${AssetButton} {
-        img {
-            margin-right: 5px;
-        }
-    }
-`;
+//     ${AssetButton} {
+//         img {
+//             margin-right: 5px;
+//         }
+//     }
+// `;
 
 const PostButton = styled.button`
     min-width: 60px;
     border-radius: 20px;
     padding-left: 16px;
     padding-right: 16px;
-    background: ${props => props.disabled ? 'rgba(0,0,0,0.5)' : '#0a66c2'};
+    background: ${props => props.disabled ? 'rgba(0,0,0,0.5)' : '#e6a106'};
     color: ${props => props.disabled ? 'rgba(1,1,1,0.2)' : '#fff'};
 
     &:hover {
-        background: ${props => props.disabled ? 'rgba(0,0,0,0.08)' : '#004182'};
+        background: ${props => props.disabled ? 'rgba(0,0,0,0.08)' : '#e6a106'};
         cursor: ${props => props.disabled ? 'none' : 'pointer'};
         outline: none !important;
     }
@@ -296,6 +297,7 @@ const Editor = styled.div`
         width: 100%;
         min-height: 100px;
         resize: none;
+        border-color: #e6a106;
     }
 
     input {

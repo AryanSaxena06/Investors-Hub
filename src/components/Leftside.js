@@ -22,7 +22,7 @@ const Leftside = (props) => {
                     <a>
                         <div>
                             <span>Connections</span>
-                            <span>Grow your network</span>
+                            <span>Grow your connections</span>
                         </div>
                         <img src="/images/widget-icon.svg" alt="" />
                     </a>
@@ -95,13 +95,13 @@ const Photo = styled.div`
     height: 72px;
     box-sizing: border-box;
     background-clip: content-box;
-    background-color: #ffffff;
+    background-color: #e6a106;
     background-position: center;
     background-size: 60%;
     background-repeat: no-repeat;
     border: 2px solid #ffffff;
     margin : -38px auto 12px;
-    border-radius: 50%;
+    border-radius: 10%;
 `;
 
 const Link = styled.div`
@@ -194,7 +194,7 @@ const CommunityCard = styled(ArtCard)`
         font-size: 12px;
 
         &:hover {
-            color: #0a66c2;
+            color: #e6a106;
         }
 
         span {
@@ -211,6 +211,7 @@ const CommunityCard = styled(ArtCard)`
 
             &:hover {
                 background-color: rgba(0,0,0,0.08);
+                color: #e6a106;
             }
         }
     }

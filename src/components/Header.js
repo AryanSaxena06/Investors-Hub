@@ -32,14 +32,10 @@ const Header = (props) => {
                         <NavList>
                             <a>
                                 <img src="/images/nav-network.svg" alt="" />
-                                <span>My Network</span>
+                                <span>Connections</span>
                             </a>
                         </NavList>
                         <NavList>
-                            <a>
-                                <img src="/images/nav-jobs.svg" alt="" />
-                                <span>Jobs</span>
-                            </a>
                         </NavList>
                         <NavList>
                             <a>
@@ -75,15 +71,15 @@ const Header = (props) => {
                             </SignOut>
                         </User>
 
-                        <Work>
+                        <Settings>
                             <a>
                                 <img src="/images/nav-work.svg" alt="" />
                                 <span>
-                                    Work
+                                    Settings
                                     <img src="/images/down-icon.svg" alt="" />
                                 </span>
                             </a>
-                        </Work>
+                        </Settings>
                     </NavListWrap>
                 </Nav>
             </Content>
@@ -126,7 +122,7 @@ const Search = styled.div`
         input {
             border: none;
             box-shadow: none;
-            background-color: #eef3f8;
+            background-color: #e6a106;
             border-radius: 2px;
             color: rgba(0,0,0,0.9);
             width: 218px;
@@ -271,7 +267,7 @@ const User = styled(NavList)`
     }
 `;
 
-const Work = styled(User)`
+const Settings = styled(User)`
     border-left: 1px solid rgba(0, 0, 0, 0.08); 
 `;
 

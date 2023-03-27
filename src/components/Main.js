@@ -32,12 +32,13 @@ const Main = (props) => {
     }
 
     return (
-        <>
-        { props.articles.length === 0 ?
-            <p>No articles to show.</p>
-            :
+        <> 
+        { props.articles.length === -1?(
+            <p>There are no articles to show.</p>
+        ):(
             <Container>
                 <ShareBox>
+                    
                     <div>
                         { props.user && props.user.photoURL ?
                             (<img src={ props.user.photoURL} />)
@@ -48,7 +49,7 @@ const Main = (props) => {
                             onClick = {handleClick}
                             disabled = { props.loading ? true : false }
                             className="post-space">
-                            Start a Post    
+                            Share your idea...
                         </button> 
                     </div>
 
@@ -77,7 +78,7 @@ const Main = (props) => {
 
                 <Content>
                     {
-                        props.loading && <img src="./images/spin-loading.gif" />
+                        props.loading && <img src="./images/spin-loader.gif" />
                     }
                     {
                         props.articles.length != 0 &&
@@ -119,11 +120,11 @@ const Main = (props) => {
                                         <button>
                                             <img src="images/like-icon.png" alt="" />
                                             <img src="images/clap-icon.png" alt="" />
-                                            <span>62</span>
+                                            <span></span>
                                         </button>
                                     </li>
                                     <li>
-                                        <a>{article.comments} comments</a>
+                                        <a>{article.comments} </a>
                                     </li>
                                 </SocialCounts>
 
@@ -153,7 +154,7 @@ const Main = (props) => {
 
                 <PostModal showModal={showModal} handleClick = {handleClick} />
             </Container>
-        }
+        )}
         </>
     );
 };
@@ -183,7 +184,7 @@ const ShareBox = styled(CommonCard)`
     div {
         button {
             outline: none;
-            color: rgba(0,0,0,0.6);
+            color: #e6a106;
             font-size: 14px;
             line-height: 1.5;
             min-height: 48px;
@@ -242,7 +243,7 @@ const ShareBox = styled(CommonCard)`
                 }
 
                 span {
-                    color: #70b5f9;
+                    color: #e6a106;
                 }
             }
         }
@@ -340,7 +341,7 @@ const SocialCounts = styled.ul`
     list-style: none;
     margin: 0 16px;
     padding: 8px 0;
-    border-bottom: 1px solid #e9e5df;
+    border-bottom: 1px solid #e6a106;
 
     li {
         margin-right: 5px;
@@ -349,7 +350,7 @@ const SocialCounts = styled.ul`
         button {
             display: flex;
             border: none;
-            background: #fff;
+            background-color: #fff;
         }
     }
 
@@ -370,7 +371,7 @@ const SocialActions = styled.div`
         display: inline-flex;
         align-items: center;
         padding: 8px;
-        color: #0a66c2;
+        color: #e6a106;
         border: none;
         background-color: #fff;
 

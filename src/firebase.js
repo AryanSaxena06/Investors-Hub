@@ -1,14 +1,13 @@
 import firebase from 'firebase';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCSikM5CnY3efQ1PyQFsueZgUHeWX6tsEI",
-    authDomain: "linkedin-clone-c8494.firebaseapp.com",
-    projectId: "linkedin-clone-c8494",
-    storageBucket: "linkedin-clone-c8494.appspot.com",
-    messagingSenderId: "966401590980",
-    appId: "1:966401590980:web:88b6a4358fb9dd421feb91",
-    measurementId: "G-EEL89E47N4",
-};
+    apiKey: "AIzaSyCoD7kBIMl7bNLMwnRMwQ2_OebreLYzOe4",
+    authDomain: "investors-hub-409a6.firebaseapp.com",
+    projectId: "investors-hub-409a6",
+    storageBucket: "investors-hub-409a6.appspot.com",
+    messagingSenderId: "414360466294",
+    appId: "1:414360466294:web:2444bcc2fbb8c6d3310057"
+  };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();

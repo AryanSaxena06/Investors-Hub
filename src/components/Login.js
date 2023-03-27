@@ -22,7 +22,7 @@ const Login = (props) => {
 
             <Section>
                 <Hero>
-                    <h1>Welcome to your professional community</h1>
+                    <h1>"Start Investing Now"<br></br> Invest In India's Emerging Startups</h1>
                     <img src="/images/login-hero.svg" alt="" />
                 </Hero>
 
@@ -78,8 +78,8 @@ const Join = styled.a`
 `;
 
 const SignIn = styled.a`
-    box-shadow: inset 0 0 0 1px #0a66c2;
-    color: #0a66c2;
+    box-shadow: inset 0 0 0 1px #e6a106;
+    color: #e6a106;
     border-radius: 24px;
     transition-duration: 167ms;
     font-size: 16px;
@@ -90,11 +90,11 @@ const SignIn = styled.a`
     background-color: rgba(0, 0, 0, 0);
 
     &:hover {
-        background-color: rgba(112, 181, 249, 0.15);
-        color: #0a66c2;
+        background-color: rgba(230, 161, 6, 0.15);
+        color: #e6a106;
         text-decoration: none;
         cursor: pointer;
-        box-shadow: inset 0 0 0 2px #0a66c2;
+        box-shadow: inset 0 0 0 2px #e6a106;
     }
 `;
 
@@ -108,6 +108,7 @@ const Section = styled.section`
     position: relative;
     flex-wrap: wrap;
     width: 100%;
+    max-width:1128px; 
     align-items: center;
     margin: auto;
 
@@ -122,8 +123,9 @@ const Hero = styled.div`
     h1 {
         padding-bottom: 0;
         width: 55%;
-        font-size: 53px;
-        color: #2977c9;
+        font-size: 56px;
+        color: #e6a106;
+        background-color:none;
         font-weight: 200;
         line-height: 70px;
 
@@ -137,18 +139,20 @@ const Hero = styled.div`
     }
 
     img {
-        /*z-index: -1;*/
+        
         width: 700px;
         height: 670px;
         position: absolute;
         bottom: -2px;
         right: -150px;
+        border-radius: 28px;
 
         @media (max-width: 768px) {
             top: 230px;
             width: initial;
             position: initial;
             height: initial;
+            border-radius: 28px;
         }
     }
 `;

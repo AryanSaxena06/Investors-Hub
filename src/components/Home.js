@@ -10,10 +10,10 @@ const Home = (props) => {
         <Container>
             {!props.user && <Redirect to = '/' />}
             <Section>
-                <h5>
-                    <a> Hiring in a hurry? - </a>
+                {/* <h5>
+                    <a> I am in home.js?  </a>
                 </h5>
-                <p> Find talents in record time with LinkedIn Premium and unlock special benefits!</p>
+                <p> </p> */}
             </Section>
 
             <Layout>
@@ -26,15 +26,15 @@ const Home = (props) => {
 }
 
 const Container = styled.div`
-    padding-top: 52px;
+    padding-top: 1px;
     max-width: 100%;
 `;
 
-const Content = styled.div`
-    max-width: 1120px;
-    margin-left: auto;
-    margin-right: auto;
-`;
+// const Content = styled.div`
+//     max-width: 1120px;
+//     margin-left: auto;
+//     margin-right: auto;
+// `;
 
 const Section = styled.section`
     min-height: 50px;
@@ -46,7 +46,7 @@ const Section = styled.section`
     justify-content: center;
 
     h5 {
-        color: #0a66c2;
+        color: #e6a106;
         font-size: 14px;
 
         a {
@@ -73,7 +73,7 @@ const Layout = styled.div`
     column-gap: 25px;
     row-gap: 25px;
     margin: 25px 0;
-    /*grid-template-row: auto;*/
+    
 
     @media (max-width: 768px) {
         display:  flex;
